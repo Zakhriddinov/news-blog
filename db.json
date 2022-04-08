@@ -1,0 +1,44 @@
+{
+  "news": [
+    {
+      "id": "9bf6315f-7b71-41a7-a371-306b184a7fab",
+      "name": "Salom",
+      "description": "duntp",
+      "category": "Hot News"
+    },
+    {
+      "id": "2c2b5246-3fe4-4142-b7fe-cd81daca7337",
+      "name": "asdaad",
+      "description": "asdad",
+      "category": "World News"
+    },
+    {
+      "id": "94ce0940-d56e-4488-8f7d-a0fb67321cf0",
+      "name": "adas",
+      "description": "asdsada",
+      "category": "Hot News"
+    }
+  ],
+  "filters": [
+    {
+      "name": "all",
+      "label": "All",
+      "className": "btn-outline-dark"
+    },
+    {
+      "name": "Hot News",
+      "label": "Hot News",
+      "className": "btn-danger"
+    },
+    {
+      "name": "Sport News",
+      "label": "Sport News",
+      "className": "btn-primary"
+    },
+    {
+      "name": "World News",
+      "label": "World News",
+      "className": "btn-success"
+    }
+  ]
+}
