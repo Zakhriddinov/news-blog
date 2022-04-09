@@ -3,13 +3,13 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { v4 } from 'uuid'
 import { useHttp } from '../hooks/useHttp'
-import { newsCreated } from '../redux/actions'
+import { newsCreated } from './newsList/news_slice'
 const NewsFormAdd = () => {
 
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
   const [category, setCategory] = useState("")
-  const { filterLoadingStatus, filters } = useSelector(state => state);
+  const { filterLoadingStatus, filters } = useSelector(state => state.filter);
   const dispatch = useDispatch();
   const { request } = useHttp();
 
@@ -17,7 +17,7 @@ const NewsFormAdd = () => {
   const onSubmitHandler = e => {
     e.preventDefault();
     const news = { id: v4(), name, description, category }
-    request("http://localhost:5000/news", "POST", JSON.stringify(news))
+    request("https://react-project-backend-api.herokuapp.com/news", "POST", JSON.stringify(news))
       .then(res => console.log('success'))
       .then(dispatch(newsCreated(news)))
       .catch(err => console.log(err))

@@ -6,13 +6,13 @@ import Spinner from '../components/Spinner'
 import Error from '../components/Error'
 import classNames from 'classnames'
 const NewsFilter = () => {
-  const { filters, filterLoadingStatus, activeFilter } = useSelector(state => state)
+  const { filters, filterLoadingStatus, activeFilter } = useSelector(state => state.filter)
   const dispatch = useDispatch();
   const { request } = useHttp();
 
   useEffect(() => {
     dispatch(filtersFetching())
-    request("http://localhost:5000/filters")
+    request("https://react-project-backend-api.herokuapp.com/filters")
       .then(data => dispatch(filtersFetched(data)))
       .catch(err => dispatch(filtersFetchingError()))
     //eslint-disable-next-line

@@ -3,12 +3,10 @@ import { createRoot } from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from './redux/reducer';
+import { store } from './redux/store';
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-const store = createStore(reducer);
 
 root.render(
   <Provider store={store}>
