@@ -19,7 +19,7 @@ export default function NewsList() {
    }, [])
 
    const onDelete = useCallback((id) => {
-      request(`https://react-project-backend-api.herokuapp.com/news/${id}`, "DELETE")
+      request(`https://news-blog-backend-7fc557758889.herokuapp.com/news/${id}`, "DELETE")
          .then(data => console.log(data + "Deleted"))
          .then(dispatch(newsDeleted(id)))
          .catch(() => dispatch("NEWS_FETCHING_ERROR"))
