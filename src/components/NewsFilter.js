@@ -12,7 +12,7 @@ const NewsFilter = () => {
 
   useEffect(() => {
     dispatch(filtersFetching())
-    request("https://react-project-backend-api.herokuapp.com/filters")
+    request("https://news-blog-backend-7fc557758889.herokuapp.com/filters")
       .then(data => dispatch(filtersFetched(data)))
       .catch(err => dispatch(filtersFetchingError()))
     //eslint-disable-next-line
