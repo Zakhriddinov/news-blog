@@ -11,7 +11,7 @@ export const fetchNews = createAsyncThunk(
   "news/fetchNews",
   async () => {
     const { request } = useHttp();
-    return await request("https://react-project-backend-api.herokuapp.com/news")
+    return await request("https://news-blog-backend-7fc557758889.herokuapp.com/news")
   }
 )
 
