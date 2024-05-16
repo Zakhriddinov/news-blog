@@ -17,7 +17,7 @@ const NewsFormAdd = () => {
   const onSubmitHandler = e => {
     e.preventDefault();
     const news = { id: v4(), name, description, category }
-    request("https://react-project-backend-api.herokuapp.com/news", "POST", JSON.stringify(news))
+    request("https://news-blog-backend-7fc557758889.herokuapp.com/news", "POST", JSON.stringify(news))
       .then(res => console.log('success'))
       .then(dispatch(newsCreated(news)))
       .catch(err => console.log(err))
